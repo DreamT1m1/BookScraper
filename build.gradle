@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ee.taltech.iti0202.bookscraper'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation("org.jsoup:jsoup:1.20.1")
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+    implementation("org.hibernate.orm:hibernate-core:6.6.15.Final")
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation("org.postgresql:postgresql:42.7.5")
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation("org.mockito:mockito-core:5.17.0")
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation("org.mockito:mockito-junit-jupiter:5.17.0")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'ee.taltech.iti0202.bookscraper.App'
+}

@@ -1,0 +1,7 @@
+hibernate.driver_class=
+hibernate.connection.url=
+hibernate.connection.username=
+hibernate.connection.password=
+
+hibernate.connection.dialect=
+hibernate.current_session_context_class=thread
